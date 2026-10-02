@@ -69,7 +69,9 @@ Ghost пружа **16 Windows функција јачања** плус **Azure �
 ### Процена Безбедности
 ```powershell
 # Учитајте Ghost модул
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 
 # Проверите тренутни став безбедности
 Get-Ghost
@@ -97,7 +99,9 @@ Set-Ghost -SMBv1 -RDP -USBStorage -Intune
 
 ### Опција 1: Директно Преузимање (Тестирање)
 ```powershell
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 ```
 
 ### Опција 2: Инсталирање Модула
